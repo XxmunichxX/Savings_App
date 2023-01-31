@@ -10,7 +10,12 @@ import SwiftUI
 
 extension View {
     func stacked(at position: Int, in total: Int) -> some View {
-        let offset = Double(total - position)
+        var offset:Double {
+            if Double(total - position) > 3 {
+                return 3
+            } 
+            return Double(total - position)
+            }
         return self.offset(x: 0, y: offset * 10)
     }
 }

@@ -39,23 +39,30 @@ struct MoneyView: View {
             }
             .rotationEffect(.degrees(Double(offset.width / 5)))
             .offset(x: offset.width * 5, y: 0)
-            .opacity(2 - Double(abs(offset.width / 50)))
             .gesture(
                 DragGesture()
                     .onChanged { gesture in
                         offset = gesture.translation
                     }
                     .onEnded { _ in
-                        if abs(offset.width) > 100 {
-                            vm.money.amount -= 1
-                        } else {
-                            offset = .zero
-                        }
+                        swipeMoney(width: offset.width)
                     }
             )
             .padding()
-        
     }
+    
+    func swipeMoney(width: CGFloat) {
+            switch width {
+            case -500...(-50):
+                offset = CGSize(width: -500, height: 0)
+                vm.money.amount -= 1
+            case 50...500:
+                offset = CGSize(width: 500, height: 0)
+                vm.money.amount += 1
+            default:
+                offset = .zero
+            }
+        }
 }
 
 struct MoneyView_Previews: PreviewProvider {    

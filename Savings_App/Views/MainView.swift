@@ -27,10 +27,9 @@ struct MainView: View {
                 
                 // MARK: Daily Budget
                 ZStack {
-                    ForEach(0..<3, id: \.self) { index in
+                    ForEach(0..<Int(vm.money.amount), id: \.self) { index in
                         MoneyView(money: vm.money)
-                        MoneyView(money: vm.money)
-                            .offset(y: -10)
+                            .stacked(at: index, in: Int(vm.money.amount))
                             .padding(.vertical)
                     }
                 }
