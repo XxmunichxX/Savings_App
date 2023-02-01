@@ -27,7 +27,6 @@ struct MoneyView: View {
                     .offset(x:150, y: -90)
             }
             .overlay {
-                //HERE CHANGE THE READ VALUE TO ARRAY.COUNT
                 Text(String(format: "%.2f", vm.money.amount))
                     .fontWeight(.heavy)
                     .font(.system(size: 100))
