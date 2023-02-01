@@ -83,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB4A434C298AE39400A53F9F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ABAC809329885C800024710A /* MoneyViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		ABAC804E2986DBD50024710A = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				ABAC805A2986DBD50024710A /* Savings_AppApp.swift */,
-				ABAC809329885C800024710A /* MoneyViewModel.swift */,
+				AB4A434C298AE39400A53F9F /* ViewModels */,
 				ABAC808F29884A790024710A /* Models */,
 				ABAC808A29883D660024710A /* Views */,
 				ABAC809229884ECE0024710A /* Extensions */,

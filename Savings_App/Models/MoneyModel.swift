@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Money {
-    var amount: Double
-    static let example = Money(amount: 3)
+struct Money: Hashable {
+    var amount: Double = 10
+    static let example = Money()
 }

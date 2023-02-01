@@ -28,7 +28,7 @@ struct MainView: View {
                 // MARK: Daily Budget
                 ZStack {
                     ForEach(0..<Int(vm.money.amount), id: \.self) { index in
-                        MoneyView(money: vm.money)
+                        MoneyView()
                             .stacked(at: index, in: Int(vm.money.amount))
                             .padding(.vertical)
                     }
@@ -45,7 +45,8 @@ struct MainView: View {
                                  isActive: $bucketPressed)
                 }
                 
-                Button(action: {}) {
+                Button(action: {
+                    withAnimation(.easeIn) {vm.addAmount(add: 10)}}) {
                     RoundedRectangle(cornerRadius: 20)
                         .frame(maxWidth: .infinity)
                         .frame(height: 80)

@@ -15,8 +15,6 @@ struct MoneyView: View {
     
     @State private var offset = CGSize.zero
     
-    let money: Money
-    
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
             .frame(maxWidth: .infinity)
@@ -29,7 +27,8 @@ struct MoneyView: View {
                     .offset(x:150, y: -90)
             }
             .overlay {
-                Text(String(format: "%.2f", money.amount))
+                //HERE CHANGE THE READ VALUE TO ARRAY.COUNT
+                Text(String(format: "%.2f", vm.money.amount))
                     .fontWeight(.heavy)
                     .font(.system(size: 100))
             }
@@ -67,7 +66,7 @@ struct MoneyView: View {
 
 struct MoneyView_Previews: PreviewProvider {    
     static var previews: some View {
-        MoneyView(money: Money.example)
+        MoneyView()
             .environmentObject(MoneyViewModel())
     }
 }
