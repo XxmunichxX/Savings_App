@@ -56,7 +56,7 @@ struct MoneyView: View {
                 vm.money.amount -= 1
             case 50...500:
                 offset = CGSize(width: 500, height: 0)
-                vm.money.amount += 1
+                vm.money.amount -= 1
             default:
                 offset = .zero
             }
