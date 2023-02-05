@@ -12,24 +12,24 @@ struct DaysView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     
-    @State private var currentMonth = Date()
+    @EnvironmentObject var vm: MoneyViewModel
     
-    /// create a variable to check if the budget was respected that day
-    @State var wasRespected: Bool = false
+    var currentMonth = Date()
+    
+    var wasRespected: Bool {
+        vm.money.amount <= 0 ? false : true
+    }
     
     /// clicking on the day -> see more details for that day as how much
     /// we went beyond the budget or we saved
     
+    ///to find the day = currentDate.filter and search just for the first number available
+
     var body: some View {
         NavigationView {
             VStack {
-                // title
-                Text("CALENDAR")
-                    .fontWeight(.heavy)
-                    .font(.system(size: 40))
-                Spacer()
                 /// here create something like ForEach day in daysInCalendar
-                /// and build the view
+                /// and build the view maybe using LazyGrid
                 HStack {
                     VStack {
                         Text("\(currentMonth, format: Date.FormatStyle().month())")
@@ -49,6 +49,7 @@ struct DaysView: View {
 
         }
         .navigationBarBackButtonHidden()
+        .navigationTitle("CALENDAR")
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {dismiss.callAsFunction()}) {
@@ -65,5 +66,6 @@ struct DaysView: View {
 struct DaysView_Previews: PreviewProvider {
     static var previews: some View {
         DaysView()
+            .environmentObject(MoneyViewModel())
     }
 }
