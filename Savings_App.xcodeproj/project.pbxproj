@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB4A435529943B9000A53F9F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A435429943B9000A53F9F /* SettingsView.swift */; };
 		ABAC805B2986DBD50024710A /* Savings_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC805A2986DBD50024710A /* Savings_AppApp.swift */; };
 		ABAC805F2986DBD70024710A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAC805E2986DBD70024710A /* Assets.xcassets */; };
 		ABAC80622986DBD70024710A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAC80612986DBD70024710A /* Preview Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB4A435429943B9000A53F9F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ABAC80572986DBD50024710A /* Savings_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Savings_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC805A2986DBD50024710A /* Savings_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Savings_AppApp.swift; sourceTree = "<group>"; };
 		ABAC805E2986DBD70024710A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				ABAC80842986DBF30024710A /* MainView.swift */,
+				AB4A435429943B9000A53F9F /* SettingsView.swift */,
 				ABAC808629871F600024710A /* BucketListView.swift */,
 				ABAC808829871F960024710A /* DaysView.swift */,
 				ABAC808B2988492E0024710A /* MoneyView.swift */,
@@ -310,6 +313,7 @@
 				ABAC808E29884A3F0024710A /* MoneyModel.swift in Sources */,
 				ABAC808C2988492E0024710A /* MoneyView.swift in Sources */,
 				ABAC808729871F600024710A /* BucketListView.swift in Sources */,
+				AB4A435529943B9000A53F9F /* SettingsView.swift in Sources */,
 				ABAC809429885C810024710A /* MoneyViewModel.swift in Sources */,
 				ABAC808929871F960024710A /* DaysView.swift in Sources */,
 				ABAC809129884EC90024710A /* ExtensionView.swift in Sources */,
@@ -476,11 +480,12 @@
 				DEVELOPMENT_TEAM = XEW3LDVT97;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Daily";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -506,11 +511,12 @@
 				DEVELOPMENT_TEAM = XEW3LDVT97;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Daily";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

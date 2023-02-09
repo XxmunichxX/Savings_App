@@ -8,6 +8,6 @@
 import Foundation
 
 struct Money: Hashable {
-    var amount: Double = 10
     static let example = Money()
+    var amount: Double = 10
 }

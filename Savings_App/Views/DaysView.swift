@@ -29,27 +29,24 @@ struct DaysView: View {
         NavigationView {
             VStack {
                 /// here create something like ForEach day in daysInCalendar
-                /// and build the view maybe using LazyGrid
+                /// and build the view maybe using LazyGrid?
                 HStack {
                     VStack {
                         Text("\(currentMonth, format: Date.FormatStyle().month())")
                             .fontWeight(.heavy)
-                            .font(.system(size: 22))
+                            .font(.system(size: 44))
                         Text("\(currentMonth, format: Date.FormatStyle().day())")
-                            .font(.system(size: 50))
+                            .font(.system(size: 100))
                             .fontWeight(.heavy)
                             .foregroundColor(wasRespected ? .green : .red)
                         
                     }
                     .padding()
-                    Spacer()
+                    
                 }
-                Spacer(minLength: 600) // this has to be done with Geometry
             }
-
         }
         .navigationBarBackButtonHidden()
-        .navigationTitle("CALENDAR")
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {dismiss.callAsFunction()}) {

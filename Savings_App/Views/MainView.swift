@@ -18,13 +18,20 @@ struct MainView: View {
     
     @State private var bucketPressed: Bool = false
     @State private var daysPressed: Bool = false
+    @State private var settingsPressed: Bool = false
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("APP NAME")
-                    .font(.title)
-                    .bold()
+            VStack(alignment: .leading) {
+                Text("MY DAILY")
+                    .foregroundColor(colorScheme == .light ? .white : .black)
+                    .font(.system(size: 60))
+                    .fontWeight(.heavy)
+                    .shadow(color: colorScheme == .light ? .black : .white,
+                            radius: 0,
+                            x: 4,
+                            y: 8)
+                    .padding()
                 
                 Spacer()
                 
@@ -55,7 +62,7 @@ struct MainView: View {
                         .frame(height: 80)
                         .foregroundColor(colorScheme == .light ? .black : .white)
                         .overlay {
-                            Text("SET DAILY BUDGET")
+                            Text("ADD DAILY BUDGET")
                                 .foregroundColor(colorScheme == .light ? .white : .black)
                                 .font(.title2)
                                 .fontWeight(.heavy)
@@ -65,6 +72,17 @@ struct MainView: View {
                 }
             }
             .background(.gray.opacity(0.1))
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: SettingsView(), isActive: $settingsPressed) {
+                        Button(action: {settingsPressed.toggle()}) {
+                            Image(systemName: "gear.circle.fill")
+                                .foregroundColor(colorScheme == .light ? .black : .white)
+                                .font(.system(size: 25))
+                        }
+                    }
+                }
+            }
         }
     }
 }
