@@ -14,8 +14,12 @@ struct Savings_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
+            /// if onboarding {
+            ///  OnboardingTableView()
+            /// }  else  {
             MainView()
                 .environmentObject(MoneyViewModel())
+                .environmentObject(ItemViewModel())
         }
     }
 }
