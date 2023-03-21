@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AB094E1029C8B7B100B48DFE /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB094E0F29C8B7B100B48DFE /* ItemViewModel.swift */; };
 		AB094E1329C8B8D700B48DFE /* ItemModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB094E1129C8B8D700B48DFE /* ItemModel.xcdatamodeld */; };
+		AB094E1529C9EB0500B48DFE /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB094E1429C9EB0400B48DFE /* AddItemView.swift */; };
+		AB094E1C29CA6D6E00B48DFE /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB094E1B29CA6D6E00B48DFE /* ItemView.swift */; };
 		AB4A435529943B9000A53F9F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A435429943B9000A53F9F /* SettingsView.swift */; };
 		ABAC805B2986DBD50024710A /* Savings_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC805A2986DBD50024710A /* Savings_AppApp.swift */; };
 		ABAC805F2986DBD70024710A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAC805E2986DBD70024710A /* Assets.xcassets */; };
@@ -21,7 +23,7 @@
 		ABAC808929871F960024710A /* DaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC808829871F960024710A /* DaysView.swift */; };
 		ABAC808C2988492E0024710A /* MoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC808B2988492E0024710A /* MoneyView.swift */; };
 		ABAC808E29884A3F0024710A /* MoneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC808D29884A3F0024710A /* MoneyModel.swift */; };
-		ABAC809129884EC90024710A /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC809029884EC90024710A /* ExtensionView.swift */; };
+		ABAC809129884EC90024710A /* StackedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC809029884EC90024710A /* StackedView.swift */; };
 		ABAC809429885C810024710A /* MoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC809329885C800024710A /* MoneyViewModel.swift */; };
 		ABB8100429A5848600CA1A8B /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8100329A5848600CA1A8B /* OnboardingTabView.swift */; };
 		ABB8100629A584A800CA1A8B /* OnboardFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8100529A584A800CA1A8B /* OnboardFirstView.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		AB094E0F29C8B7B100B48DFE /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		AB094E1229C8B8D700B48DFE /* ItemModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ItemModel.xcdatamodel; sourceTree = "<group>"; };
+		AB094E1429C9EB0400B48DFE /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		AB094E1B29CA6D6E00B48DFE /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		AB4A435429943B9000A53F9F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ABAC80572986DBD50024710A /* Savings_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Savings_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC805A2986DBD50024710A /* Savings_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Savings_AppApp.swift; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		ABAC808829871F960024710A /* DaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysView.swift; sourceTree = "<group>"; };
 		ABAC808B2988492E0024710A /* MoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyView.swift; sourceTree = "<group>"; };
 		ABAC808D29884A3F0024710A /* MoneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModel.swift; sourceTree = "<group>"; };
-		ABAC809029884EC90024710A /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		ABAC809029884EC90024710A /* StackedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedView.swift; sourceTree = "<group>"; };
 		ABAC809329885C800024710A /* MoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewModel.swift; sourceTree = "<group>"; };
 		ABB8100329A5848600CA1A8B /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
 		ABB8100529A584A800CA1A8B /* OnboardFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstView.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				ABAC80842986DBF30024710A /* MainView.swift */,
 				AB4A435429943B9000A53F9F /* SettingsView.swift */,
 				ABAC808629871F600024710A /* BucketListView.swift */,
+				AB094E1B29CA6D6E00B48DFE /* ItemView.swift */,
+				AB094E1429C9EB0400B48DFE /* AddItemView.swift */,
 				ABAC808829871F960024710A /* DaysView.swift */,
 				ABAC808B2988492E0024710A /* MoneyView.swift */,
 			);
@@ -191,7 +197,7 @@
 		ABAC809229884ECE0024710A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				ABAC809029884EC90024710A /* ExtensionView.swift */,
+				ABAC809029884EC90024710A /* StackedView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,11 +360,13 @@
 				ABB8100829A584BD00CA1A8B /* OnboardSecondView.swift in Sources */,
 				ABB8100429A5848600CA1A8B /* OnboardingTabView.swift in Sources */,
 				ABAC808929871F960024710A /* DaysView.swift in Sources */,
-				ABAC809129884EC90024710A /* ExtensionView.swift in Sources */,
+				ABAC809129884EC90024710A /* StackedView.swift in Sources */,
 				ABAC80852986DBF30024710A /* MainView.swift in Sources */,
 				AB094E1329C8B8D700B48DFE /* ItemModel.xcdatamodeld in Sources */,
 				ABAC805B2986DBD50024710A /* Savings_AppApp.swift in Sources */,
+				AB094E1C29CA6D6E00B48DFE /* ItemView.swift in Sources */,
 				ABB8100B29A58B4800CA1A8B /* ColorExtension.swift in Sources */,
+				AB094E1529C9EB0500B48DFE /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +534,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,7 +565,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

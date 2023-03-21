@@ -71,7 +71,7 @@ struct MainView: View {
                         .padding()
                 }
             }
-            .background(.gray.opacity(0.1))
+            .background(.orange.opacity(0.5))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: SettingsView(), isActive: $settingsPressed) {

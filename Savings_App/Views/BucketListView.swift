@@ -20,23 +20,31 @@ struct BucketListView: View {
         NavigationView {
             
             if itemVM.savedItems.isEmpty {
+                firstItemView
+            } else {
                 VStack {
-                    Text("Add your first item!")
-                        .fontWeight(.semibold)
-                        .font(.system(size: 30))
-                        .padding()
-                    
+                    ScrollView {
+                        ForEach(itemVM.savedItems) { item in
+                            ItemView(itemName: item.name ?? "", itemValue: item.value)
+                        }
+                        Spacer()
+                        
+                    }
                     Button(action: {showModal.toggle()}) {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.system(size: 25))
-                            .foregroundColor(colorScheme == .light ?  .black : .white)
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 60)
+                            .foregroundColor(colorScheme == .light ? .black : .white)
+                            .overlay {
+                                Text("ADD ITEM")
+                                    .foregroundColor(colorScheme == .light ? .white : .black)
+                                    .font(.title2)
+                                    .fontWeight(.heavy)
+                                    .bold()
+                            }
+                            .padding()
                     }
                 }
-            }
-            
-            List(itemVM.savedItems) { item in
-                Text(item.name ?? "")
-                Text("\(item.value)")
             }
         }
         .navigationBarBackButtonHidden()
@@ -48,6 +56,36 @@ struct BucketListView: View {
                         .fontWeight(.heavy)
                 }
             }
+        }
+        .sheet(isPresented: $showModal) {
+            AddItemView()
+                .presentationDetents([.medium])
+        }
+    }
+}
+
+// MARK: Components
+
+// First Item View
+extension BucketListView {
+    var firstItemView: some View {
+        ZStack {
+            VStack {
+                Text("Add your first item!")
+                    .fontWeight(.semibold)
+                    .font(.system(size: 30))
+                    .padding()
+                
+                Button(action: {showModal.toggle()}) {
+                    Image(systemName: "plus.circle.fill")
+                        .font(.system(size: 25))
+                        .foregroundColor(colorScheme == .light ?  .black : .white)
+                }
+            }
+        }
+        .sheet(isPresented: $showModal) {
+            AddItemView()
+                .presentationDetents([.medium])
         }
     }
 }
