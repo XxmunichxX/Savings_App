@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct Savings_AppApp: App {
     
-    @StateObject var vm = MoneyViewModel()
+    @StateObject var moneyVM = MoneyViewModel()
+    @StateObject var itemVM = ItemViewModel()
     
     var body: some Scene {
         WindowGroup {

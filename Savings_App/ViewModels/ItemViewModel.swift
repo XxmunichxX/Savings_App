@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import CoreData
 
 class ItemViewModel: ObservableObject {
@@ -30,6 +31,18 @@ class ItemViewModel: ObservableObject {
             savedItems = try container.viewContext.fetch(request)
         } catch let error {
             print("Error fetching: \(error)")
+        }
+    }
+    
+    func removeItem(at offsets: IndexSet) {
+      for index in offsets {
+            let item = savedItems[index]
+            container.viewContext.delete(item)
+           do {
+                try container.viewContext.save()
+            } catch let error {
+                print("Error while saving data: \(error)")
+            }
         }
     }
     

@@ -18,18 +18,21 @@ struct BucketListView: View {
     
     var body: some View {
         NavigationView {
-            
             if itemVM.savedItems.isEmpty {
                 firstItemView
             } else {
                 VStack {
-                    ScrollView {
+                    List {
                         ForEach(itemVM.savedItems) { item in
                             ItemView(itemName: item.name ?? "", itemValue: item.value)
                         }
-                        Spacer()
-                        
+                        .onDelete(perform: itemVM.removeItem)
                     }
+                    .toolbar {
+                        EditButton()
+                    }
+                    Spacer()
+                    
                     Button(action: {showModal.toggle()}) {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(maxWidth: .infinity)

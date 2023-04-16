@@ -18,43 +18,32 @@ struct AddItemView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                GridRow(alignment: .center) {
-                    Circle()
-                    Circle()
-                    Circle()
-                    Circle()
-                    Circle()
-                    Circle()
-                }
-                .frame(width:50)
-            }
-            .padding()
-            
             RoundedRectangle(cornerRadius: 10)
                 .frame(height: 55)
-                .foregroundColor(.white)
-                .shadow(color: .black, radius: 0, x: 7, y: 8)
+                .foregroundColor(colorScheme == .light ? .white : .black)
+                .shadow(color: colorScheme == .light ? .black : .white, radius: 0, x: 7, y: 8)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(lineWidth: 3)
                 }
                 .overlay {
                     TextField("Item name...", text: $itemName, axis: .vertical)
+                        .submitLabel(.next)
                         .padding()
                 }
                 .padding()
             
             RoundedRectangle(cornerRadius: 10)
                 .frame(height: 55)
-                .foregroundColor(.white)
-                .shadow(color: .black, radius: 0, x: 7, y: 8)
+                .foregroundColor(colorScheme == .light ? .white : .black)
+                .shadow(color: colorScheme == .light ? .black : .white, radius: 0, x: 7, y: 8)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(lineWidth: 3)
                 }
                 .overlay {
                     TextField("Item value...", text: $itemValue, axis: .vertical)
+                        .keyboardType(.decimalPad)
                         .padding()
                 }
                 .padding()

@@ -14,12 +14,8 @@ struct ItemView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Divider()
+            //Divider()
             HStack(alignment: .center) {
-                Circle()
-                    .frame(width: 30)
-                    .padding(.horizontal,3)
-                
                 Text(itemName)
                     .fontWeight(.semibold)
                     .padding(.vertical,1)
