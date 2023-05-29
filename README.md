@@ -10,3 +10,4 @@ keeping track of how much we need to save and how many days left to reach our go
  - Swift
  - SwiftUI
  - CoreData
+ - MVVM Architecure
