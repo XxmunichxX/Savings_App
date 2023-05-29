@@ -33,7 +33,7 @@ class ItemViewModel: ObservableObject {
             print("Error fetching: \(error)")
         }
     }
-    
+    // TODO: check why is not removing items from the array
     func removeItem(at offsets: IndexSet) {
       for index in offsets {
             let item = savedItems[index]

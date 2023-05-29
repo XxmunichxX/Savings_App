@@ -10,7 +10,8 @@ import SwiftUI
 struct OnboardSecondView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    
+    @EnvironmentObject var logic: Logic
+  
     func bgColor() -> Color {
         return colorScheme == .light ? .theme.ligthBG : .black
     }
@@ -31,8 +32,7 @@ struct OnboardSecondView: View {
                     .fontWeight(.heavy)
                     .padding()
                 
-                // DISMISS OB 
-                Button(action: { }) {
+                Button(action: {withAnimation(.easeIn(duration: 1)) { logic.onboardingDone = true  }}) {
                     RoundedRectangle(cornerRadius: 20)
                         .frame(maxWidth: .infinity)
                         .frame(height: 80)
@@ -44,9 +44,8 @@ struct OnboardSecondView: View {
                                 .fontWeight(.heavy)
                                 .bold()
                         }
-                        .padding()
                 }
-
+                    .padding()
             }
         }
     }
@@ -55,5 +54,6 @@ struct OnboardSecondView: View {
 struct OnboardSecondView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardSecondView()
+            .environmentObject(Logic())
     }
 }

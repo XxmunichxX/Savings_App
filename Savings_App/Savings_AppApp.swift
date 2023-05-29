@@ -9,18 +9,9 @@ import SwiftUI
 
 @main
 struct Savings_AppApp: App {
-    
-    @StateObject var moneyVM = MoneyViewModel()
-    @StateObject var itemVM = ItemViewModel()
-    
     var body: some Scene {
         WindowGroup {
-            /// if onboarding {
-            ///  OnboardingTableView()
-            /// }  else  {
-            MainView()
-                .environmentObject(MoneyViewModel())
-                .environmentObject(ItemViewModel())
+           MainView()
         }
     }
 }

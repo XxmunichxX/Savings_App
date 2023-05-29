@@ -14,7 +14,6 @@ struct ItemView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            //Divider()
             HStack(alignment: .center) {
                 Text(itemName)
                     .fontWeight(.semibold)

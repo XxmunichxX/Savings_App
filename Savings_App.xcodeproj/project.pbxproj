@@ -12,6 +12,7 @@
 		AB094E1529C9EB0500B48DFE /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB094E1429C9EB0400B48DFE /* AddItemView.swift */; };
 		AB094E1C29CA6D6E00B48DFE /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB094E1B29CA6D6E00B48DFE /* ItemView.swift */; };
 		AB4A435529943B9000A53F9F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A435429943B9000A53F9F /* SettingsView.swift */; };
+		AB82A4082A21622900AD2935 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82A4072A21622900AD2935 /* Logic.swift */; };
 		ABAC805B2986DBD50024710A /* Savings_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC805A2986DBD50024710A /* Savings_AppApp.swift */; };
 		ABAC805F2986DBD70024710A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAC805E2986DBD70024710A /* Assets.xcassets */; };
 		ABAC80622986DBD70024710A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAC80612986DBD70024710A /* Preview Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		AB094E1429C9EB0400B48DFE /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		AB094E1B29CA6D6E00B48DFE /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		AB4A435429943B9000A53F9F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB82A4072A21622900AD2935 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		ABAC80572986DBD50024710A /* Savings_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Savings_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC805A2986DBD50024710A /* Savings_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Savings_AppApp.swift; sourceTree = "<group>"; };
 		ABAC805E2986DBD70024710A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				ABAC809329885C800024710A /* MoneyViewModel.swift */,
+				AB82A4072A21622900AD2935 /* Logic.swift */,
 				AB094E0F29C8B7B100B48DFE /* ItemViewModel.swift */,
 			);
 			path = ViewModels;
@@ -360,6 +363,7 @@
 				ABB8100829A584BD00CA1A8B /* OnboardSecondView.swift in Sources */,
 				ABB8100429A5848600CA1A8B /* OnboardingTabView.swift in Sources */,
 				ABAC808929871F960024710A /* DaysView.swift in Sources */,
+				AB82A4082A21622900AD2935 /* Logic.swift in Sources */,
 				ABAC809129884EC90024710A /* StackedView.swift in Sources */,
 				ABAC80852986DBF30024710A /* MainView.swift in Sources */,
 				AB094E1329C8B8D700B48DFE /* ItemModel.xcdatamodeld in Sources */,

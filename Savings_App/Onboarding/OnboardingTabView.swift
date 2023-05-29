@@ -25,5 +25,8 @@ struct OnboardingTabView: View {
 struct OnboardingTabView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingTabView()
+            .environmentObject(Logic())
+            .environmentObject(MoneyViewModel())
+            .environmentObject(ItemViewModel())
     }
 }
