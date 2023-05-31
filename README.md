@@ -11,3 +11,6 @@ keeping track of how much we need to save and how many days left to reach our go
  - SwiftUI
  - CoreData
  - MVVM Architecure
+
+# Screenshots
+<img width="287" alt="homeview" src="https://github.com/XxmunichxX/Savings_App/assets/69469575/73c510c2-4b83-441c-8435-4f78fb2920b6">
